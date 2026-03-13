@@ -1,0 +1,19 @@
+name: worker
+
+on:
+  push:
+
+jobs:
+  distribute:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        preparation: ["independence", "reliable", "dusk", "must", "reveal"]
+        sulphur: ["deaf", "sound", "wicked", "stare"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar Dq
